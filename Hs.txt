@@ -1,0 +1,40 @@
+MelonZ Key:SHSHHSEHHWUEUIW88E837U3Y3H3BBH2UsOIPDJ1820
+Roblox Script To Run Fast:
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+
+
+Roblox Script To Jump High:
+
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+
+Roblox Noclip Script(Press V):
+
+local h,char,play
+play = game.Players.LocalPlayer
+local uis = game:getService("UserInputService")
+game:getService("RunService"):BindToRenderStep("",0,function()
+	char = play.Character
+	if char then h = char:findFirstChildOfClass("Humanoid") end
+	if not h then return end
+	if uis:IsKeyDown(Enum.KeyCode.V) then
+		h:ChangeState(11)
+	end
+end)
+
+Roblox Script To Teleport(Press Q):
+
+clicktpon = true                    
+plr = game.Players.LocalPlayer
+hum = plr.Character.HumanoidRootPart
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == 'q' then
+if mouse.Target then
+if clicktpon then
+hum.CFrame = CFrame.new (mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+end
+end
+end
+end)
+
